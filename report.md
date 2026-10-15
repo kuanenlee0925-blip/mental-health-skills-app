@@ -1,10 +1,15 @@
 # Assignment 3.1 — Part One
 
-**Part One design proposal — publication metadata in progress.** October 15, 2026.
+**Part One design proposal.** Prepared October 15, 2026.
 
 Repository: [mental-health-skills-app](https://github.com/kuanenlee0925-blip/mental-health-skills-app).
 
-Submitted design commit: **pending the publication checkpoint.**
+Submitted design commit: [3b4cc735801de28db4f410b11fa756df3ba3080a](https://github.com/kuanenlee0925-blip/mental-health-skills-app/commit/3b4cc735801de28db4f410b11fa756df3ba3080a).
+
+This identifies the complete design checkpoint. Subsequent report/publication
+bookkeeping updates on main do not change that assessed design. Design-document
+links below are pinned to the checkpoint; the evidence log also records later
+publication checks.
 
 ## Milestone scope
 
@@ -23,11 +28,11 @@ Stop is immediate. Support is always visible; opening it pauses the cue and
 closing it requires explicit Resume or Stop. Result/history are optional next
 actions. No typing or emotional disclosure is required to complete the skill.
 
-The [design notes](docs/design-pipeline.md) explain Vue/FastAPI/SQLite separation,
+The [design notes](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/docs/design-pipeline.md) explain Vue/FastAPI/SQLite separation,
 two-call read-only SQL RAG for optional questions, planned records/API contracts,
 independent support and deterministic exercise controls, research tradeoffs,
 personalization, crisis-text heuristic limits, and travel-project reuse.
-The [flow and screen sketches](docs/flow.md) show the main experience.
+The [flow and screen sketches](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/docs/flow.md) show the main experience.
 
 The proposal prioritizes direct Start over mandatory model intake (D3/R4), a
 single action per phase (D2), and persistent support/Stop (R2/R3/D4). Explicit
@@ -38,16 +43,16 @@ up-front detail. These are justified design decisions, not proven effectiveness.
 
 ## Project documents and evidence
 
-- [README: purpose, selected scope and initial guidelines](README.md)
-- [AGENTS: class development and verification rules](AGENTS.md)
-- [Design, architecture, planned data and travel-project reuse](docs/design-pipeline.md)
-- [Main flow and low-detail screen sketches](docs/flow.md)
-- [Verification and curated evidence](docs/verification.md)
-- [AI-use disclosure](AI-USE.md)
+- [README: purpose, selected scope and initial guidelines](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/README.md)
+- [AGENTS: class development and verification rules](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/AGENTS.md)
+- [Design, architecture, planned data and travel-project reuse](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/docs/design-pipeline.md)
+- [Main flow and low-detail screen sketches](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/docs/flow.md)
+- [Verification and curated evidence, including publication checks](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/main/docs/verification.md)
+- [AI-use disclosure](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/3b4cc735801de28db4f410b11fa756df3ba3080a/AI-USE.md)
 
-These relative links are intended to resolve within the published repository.
-Before uploading this file alone to Canvas, replace them with accessible links
-to the submitted repository version and confirm instructor access.
+The repository is public. Its unauthenticated page returned HTTP 200 and remote
+main matched the design checkpoint when first published. FigJam instructor access
+is unverified; the public repository contains the same Mermaid flow and sketches.
 
 ## What is complete and what the evidence establishes
 
@@ -63,14 +68,13 @@ to the submitted repository version and confirm instructor access.
   on FigJam permissions. No live-interface capture or Design-frame revision was
   performed. The optional Figma activity adds no submission requirement.
 
-No browser exercise behavior, database persistence, timing, live model behavior,
-Figma design revision, repository publication or Canvas submission has been
-verified. The evidence log distinguishes these gaps from completed inspection.
+No browser exercise behavior, database persistence, measured timing, live model
+behavior, live-interface/Figma Design revision or Canvas submission is claimed.
+Repository publication was checked independently of these later app requirements.
 
 ## Remaining before Part One submission
 
-1. Complete publication metadata and accessible submitted-version links.
-2. Student reviews the AI-assisted proposal/disclosure and uploads report.md to
+1. Student reviews the AI-assisted proposal/disclosure and uploads report.md to
    Assignment 3.1 in Canvas. Publication is not submission.
 
 Open implementation questions: provider/model choice, verified regional resource

@@ -21,12 +21,15 @@ milestone. The user has also supplied startup and optional Figma class activitie
 - docs/verification.md distinguishes actual setup/source inspection from future
   app checks and records the revised approach after receiving the starter.
 - AI-USE.md records actual tool roles and identifier limitations. report.md now
-  summarizes the proposed design; exact submitted commit/publication links are
-  being finalized. No student review or Canvas submission is claimed.
+  summarizes the design and pins the submitted design checkpoint/document URLs.
+  No student review or Canvas submission is claimed.
 - New public repository created at the student's explicit request:
   https://github.com/kuanenlee0925-blip/mental-health-skills-app
-- Git existed before this work. Before publication: master, no commits/remote.
-  Publication status will be updated after the actual remote checks.
+- Git existed before this work. Initial branch was master with no commits/remote.
+  Design checkpoint: 3b4cc735801de28db4f410b11fa756df3ba3080a, preserved on local
+  codex/part1-design and published on main; remote hash matched, public page HTTP
+  200. Current branch main tracks origin/main. Final report/publication notes
+  are a follow-up documentation commit; inspect git log for its exact hash.
 - .gitignore excludes local secrets, environments, runtime databases and builds.
   .gitkeep files preserve empty frontend/backend/data folders in a checkout.
 
@@ -58,11 +61,10 @@ design evidence. Figma's full class round trip is optional for Part One.
 
 ## Next steps
 
-1. Check document consistency, local links, ignore rules and unchanged AGENTS.
-2. Publish the design checkpoint and finalize report.md with its exact commit
-   and accessible GitHub links; distinguish subsequent report metadata commits.
-3. Student reviews the proposal/disclosure and uploads report.md to Canvas.
-4. Implement only in a later requested increment. Resolve provider/resource-copy,
+1. Student reviews the proposal/disclosure and uploads report.md to Canvas.
+2. On a later session, recheck clean status and remote/local main agreement;
+   the assessed design checkpoint remains fixed while report metadata follows it.
+3. Implement only in a later requested increment. Resolve provider/resource-copy,
    accessibility, interruption, retrieval and phrase-rule questions through checks.
 
 Only do the optional live-interface/Figma activity if requested and prerequisites

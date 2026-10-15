@@ -24,6 +24,10 @@ Historical startup observations below describe the state at that checkpoint.
 | Check ignore rules | Exclude credentials, runtime SQLite, dependencies and builds | git check-ignore matched backend/.env, data/app.sqlite3, backend/.venv/example, frontend/node_modules/example and frontend/dist/example |
 | Check timing arithmetic | State intended duration without claiming a measurement | Six cycles of 4 + 6 seconds calculate to 60 seconds; entry estimate and exclusions are documented separately; no runtime timing test performed |
 | Inspect staged whitespace | Detect new formatting issues while preserving supplied text | The initial staged check flagged only a trailing blank line in the instructor-supplied AGENTS.md. Preserve that exact baseline; check all other staged files separately rather than silently changing class instructions |
+| Publish design checkpoint | Remote main identifies the committed design | Created local codex/part1-design checkpoint 3b4cc735801de28db4f410b11fa756df3ba3080a, created initial main from it, pushed main, and compared git ls-remote with local HEAD: matched |
+| Check public repository access | Instructor can reach repository without authentication | Unauthenticated HTTP GET of the repository returned 200; individual pinned document checks are recorded below after verification |
+| Check pinned public documents | Submitted links point to actual checkpoint content | Unauthenticated raw GETs for README, AGENTS, AI-USE, design-pipeline, flow and verification all returned 200; each matched git show at 3b4cc735801de28db4f410b11fa756df3ba3080a after line-ending normalization |
+| Check final report metadata | Usable when uploaded as a standalone file | Eight unique GitHub links; no relative-only document links, pending commit fields or draft-publication warnings remain; final report/publication notes are a separate bookkeeping update from the assessed design |
 
 Travel test counts and live-call results appear in the earlier project's reports.
 They were not rerun here and are not evidence of Assignment 3 behavior.
@@ -63,7 +67,8 @@ usable dataset description or sample conversations. Do not claim dataset review.
 - SQLite persistence, duplicate prevention and API/history agreement.
 - SQL retrieval validation, provider failures and stale responses.
 - Live model behavior or live-interface capture/Design-frame implementation.
-- Repository publication, submitted commit and instructor access.
+- Instructor's own Canvas/permission experience and access to the FigJam board;
+  repository publication and unauthenticated repository-page access were checked.
 
 The design proposal and sketches are now present. Define focused expected results
 before implementation.
