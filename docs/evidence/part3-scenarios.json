@@ -1,0 +1,188 @@
+{
+  "recorded_at": "2026-11-03T01:41:34.579163+00:00",
+  "mode": "deterministic fixtures and simulated clock; no live calls",
+  "scenarios": [
+    {
+      "id": "S01",
+      "scenario": "Alex asks for the steps, repeats the same request, then restarts the API.",
+      "expected": "200 with saved demo reply; same reply ID on retry; exactly two ordered messages after restart.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_chat_persist_retry_and_restart"
+    },
+    {
+      "id": "S02",
+      "scenario": "Alex submits [demo:fail] twice with one request ID.",
+      "expected": "Both return 502; one failed user message, no invented assistant; changing content with that ID returns 409.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_failure_retry_does_not_invent_or_duplicate_reply"
+    },
+    {
+      "id": "S03",
+      "scenario": "Fictional role-play includes HURT   myself.",
+      "expected": "Application support notice, no assistant reply, zero model calls; not a general distress detector.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_support_rule_skips_both_calls_and_uses_event"
+    },
+    {
+      "id": "S04",
+      "scenario": "Live settings are absent, then the call budget is zero.",
+      "expected": "503 not_configured, then call_limit; zero actual provider calls.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_missing_configuration_and_budget"
+    },
+    {
+      "id": "S05",
+      "scenario": "An existing v1 profile upgrades, selects larger text, and restarts.",
+      "expected": "Standard text default; large choice persists; original message ID preserved; invalid size returns 422.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_old_preferences_migrate_without_losing_history"
+    },
+    {
+      "id": "S06",
+      "scenario": "Alex stops, retries saving, and a stale checkpoint arrives.",
+      "expected": "One stopped row; stale checkpoint cannot revert it; terminal overwrite gives 409; 59,999 ms completion gives 422.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_sessions_idempotency_ordering_and_terminal_guard"
+    },
+    {
+      "id": "S07",
+      "scenario": "Alex asks about a past session with sharing off, then on.",
+      "expected": "Off retrieves no sessions; on retrieves the stopped record and returns its exact reference ID.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_scoped_retrieval_empty_then_saved_history"
+    },
+    {
+      "id": "S08",
+      "scenario": "Alex starts another conversation; a separate fictional user has a record.",
+      "expected": "No cross-conversation messages without consent; consent never exposes the other user; direct table query rejected.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_retrieval_other_conversation_and_user_scope"
+    },
+    {
+      "id": "S09",
+      "scenario": "Model proposes a write, extra statement, comment, UNION, wildcard, oversized limit or scope bypass.",
+      "expected": "All unsafe plans rejected; [demo:unsafe] returns 422; sessions remain readable.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_sql_rejects_writes_comments_joins_unions_and_scope_bypass"
+    },
+    {
+      "id": "S10",
+      "scenario": "Model invents a record ID, then times out.",
+      "expected": "invalid_references then 504; zero assistant messages persisted.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_invalid_reference_and_provider_timeout"
+    },
+    {
+      "id": "S11",
+      "scenario": "Question storage is unavailable before generation.",
+      "expected": "503; zero provider calls; no claim that the operation was saved.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_storage_failure_stops_model_calls"
+    },
+    {
+      "id": "S12",
+      "scenario": "Alex deletes fictional history during and after a pending request.",
+      "expected": "429 while busy; confirmed deletion then succeeds, keeps ring preference, and has no foreign-key violations.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "backend/test_app.py::test_delete_retains_preferences_and_busy_prevents_midcall_changes"
+    },
+    {
+      "id": "S13",
+      "scenario": "all twelve phases complete only after the final exhale, including scheduling delay",
+      "expected": "Twelve phases; final phase is sixth exhale; completion at 60,087 ms including scheduling delay.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "frontend/src/pacer.test.js::all twelve phases complete only after the final exhale, including scheduling delay"
+    },
+    {
+      "id": "S14",
+      "scenario": "support pause freezes remaining cue and explicit resume excludes pause time",
+      "expected": "Pause at 2,350 ms freezes cue; explicit resume excludes 10,000 ms; final active time 2,500 ms.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "frontend/src/pacer.test.js::support pause freezes remaining cue and explicit resume excludes pause time"
+    },
+    {
+      "id": "S15",
+      "scenario": "Stop is terminal; future timer callbacks cannot complete the attempt",
+      "expected": "Stop at 4,050 ms stays stopped after a later 70,000 ms callback.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "frontend/src/pacer.test.js::Stop is terminal; future timer callbacks cannot complete the attempt"
+    },
+    {
+      "id": "S16",
+      "scenario": "large scheduling gaps interrupt instead of catching up or inventing completion",
+      "expected": "A jump from 100 to 65,000 ms produces interrupted, never completed.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "frontend/src/pacer.test.js::large scheduling gaps interrupt instead of catching up or inventing completion"
+    },
+    {
+      "id": "S17",
+      "scenario": "stopping during support counts support time only as excluded",
+      "expected": "Stop during pause records 100 ms active plus 10,000 ms excluded.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "frontend/src/pacer.test.js::stopping during support counts support time only as excluded"
+    },
+    {
+      "id": "S18",
+      "scenario": "fractional pause samples keep active time stable across checkpoints and Stop",
+      "expected": "Fractional pause snapshots all keep active time 900 ms and wall = active + excluded.",
+      "observed": "All listed assertions passed.",
+      "passed": true,
+      "test": "frontend/src/pacer.test.js::fractional pause samples keep active time stable across checkpoints and Stop"
+    }
+  ],
+  "cross_case_checks": [
+    {
+      "id": "B1",
+      "rule": "Retries, failures, and restarts never invent or duplicate a saved assistant reply.",
+      "cases": [
+        "S01",
+        "S02",
+        "S10",
+        "S11"
+      ],
+      "passed": true
+    },
+    {
+      "id": "B2",
+      "rule": "Retrieved history obeys consent and server scope, and unsafe SQL is rejected.",
+      "cases": [
+        "S07",
+        "S08",
+        "S09",
+        "S10"
+      ],
+      "passed": true
+    },
+    {
+      "id": "B3",
+      "rule": "Only the final planned phase completes an exercise; pauses and interruptions do not silently complete it.",
+      "cases": [
+        "S06",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "passed": true
+    }
+  ]
+}

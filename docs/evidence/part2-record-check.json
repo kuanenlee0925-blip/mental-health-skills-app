@@ -1,0 +1,150 @@
+{
+  "inspected_at": "2026-10-24T18:13:11.960198+00:00",
+  "method": "Python sqlite3 URI mode=ro; parameterized SELECT; local FastAPI GET",
+  "fictional_test_data_only": true,
+  "conversation_id": "7b0ca97b-c340-4f99-893e-5553208e4dc1",
+  "api_messages_equal_database": true,
+  "message_order_and_ids": [
+    {
+      "id": "e57d52d6-0879-4f43-ae93-dff45b7795ee",
+      "request_id": "6df9d0ce-c7e7-4b9b-9517-46a3a23d959c",
+      "sequence": 1,
+      "role": "user",
+      "status": "saved",
+      "created_at": "2026-10-24T18:04:14.752+00:00",
+      "mode": "demo"
+    },
+    {
+      "id": "0be5519e-4ac4-47a3-a07a-b92947a07296",
+      "request_id": "6df9d0ce-c7e7-4b9b-9517-46a3a23d959c",
+      "sequence": 2,
+      "role": "assistant",
+      "status": "saved",
+      "created_at": "2026-10-24T18:04:14.772+00:00",
+      "mode": "demo"
+    },
+    {
+      "id": "b5b7f586-8814-42e6-a1e3-b311be3b1dbd",
+      "request_id": "0e5e3143-ab6a-417f-80ec-c9ee7a6ba045",
+      "sequence": 3,
+      "role": "user",
+      "status": "saved",
+      "created_at": "2026-10-24T18:04:25.921+00:00",
+      "mode": "demo"
+    },
+    {
+      "id": "336c2f08-66ea-40fb-9004-531fc64a0f73",
+      "request_id": "0e5e3143-ab6a-417f-80ec-c9ee7a6ba045",
+      "sequence": 4,
+      "role": "assistant",
+      "status": "saved",
+      "created_at": "2026-10-24T18:04:25.949+00:00",
+      "mode": "demo"
+    },
+    {
+      "id": "98a0d82a-e386-4184-a827-f76b9079afaa",
+      "request_id": "c3d995c7-816a-4ca0-9229-c28e9f27569e",
+      "sequence": 5,
+      "role": "user",
+      "status": "failed",
+      "created_at": "2026-10-24T18:06:23.756+00:00",
+      "mode": "demo"
+    }
+  ],
+  "failed_fixture_user_message_count": 1,
+  "foreign_key_check": [],
+  "tables": [
+    "app_events",
+    "attempts",
+    "conversations",
+    "demo_users",
+    "messages",
+    "preferences",
+    "requests",
+    "sessions",
+    "skill_content"
+  ],
+  "sessions": [
+    {
+      "id": "9518bb91-f46b-4ed0-b532-743995c38029",
+      "revision": 12,
+      "started_at": "2026-10-22T18:12:17.300000Z",
+      "ended_at": "2026-10-22T18:13:17.319000Z",
+      "outcome": "completed",
+      "wall_ms": 60019,
+      "excluded_ms": 0,
+      "active_ms": 60019,
+      "setup_ms": 4147
+    },
+    {
+      "id": "4631b560-5f6d-49d3-9695-d6af88945a38",
+      "revision": 12,
+      "started_at": "2026-10-22T18:14:37.341000Z",
+      "ended_at": "2026-10-22T18:15:30.268000Z",
+      "outcome": "stopped",
+      "wall_ms": 52927,
+      "excluded_ms": 49709,
+      "active_ms": 3218,
+      "setup_ms": 4142
+    },
+    {
+      "id": "69c7bf59-20ab-4246-9265-6289ce136446",
+      "revision": 1,
+      "started_at": "2026-10-24T18:05:37.652000Z",
+      "ended_at": "2026-10-24T18:05:41.503000Z",
+      "outcome": "stopped",
+      "wall_ms": 3851,
+      "excluded_ms": 0,
+      "active_ms": 3851,
+      "setup_ms": 1019
+    },
+    {
+      "id": "e3e0304a-1b75-4380-a1cc-b5d4141454cc",
+      "revision": 12,
+      "started_at": "2026-10-24T18:07:51.650000Z",
+      "ended_at": "2026-10-24T18:08:51.666000Z",
+      "outcome": "completed",
+      "wall_ms": 60016,
+      "excluded_ms": 0,
+      "active_ms": 60016,
+      "setup_ms": 8782
+    },
+    {
+      "id": "ee4a34a0-f94b-4e64-88fe-df80a53f5b25",
+      "revision": 1,
+      "started_at": "2026-10-24T18:11:14.712000Z",
+      "ended_at": null,
+      "outcome": "in_progress",
+      "wall_ms": 2850,
+      "excluded_ms": 0,
+      "active_ms": 2850,
+      "setup_ms": 4604
+    },
+    {
+      "id": "76f05e5c-425b-45f9-86c8-88f909e9dd78",
+      "revision": 5,
+      "started_at": "2026-10-24T18:12:09.518000Z",
+      "ended_at": "2026-10-24T18:12:24.624000Z",
+      "outcome": "stopped",
+      "wall_ms": 15106,
+      "excluded_ms": 10066,
+      "active_ms": 5040,
+      "setup_ms": 3587
+    },
+    {
+      "id": "d4ce0c55-e0aa-4542-abef-69c4b649c6c5",
+      "revision": 2,
+      "started_at": "2026-10-24T18:12:32.617000Z",
+      "ended_at": "2026-10-24T18:12:32.896000Z",
+      "outcome": "interrupted",
+      "wall_ms": 279,
+      "excluded_ms": 0,
+      "active_ms": 279,
+      "setup_ms": 3363
+    }
+  ],
+  "preference": {
+    "cue_mode": "text",
+    "use_saved_context": 0
+  }
+}

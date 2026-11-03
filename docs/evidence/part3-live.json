@@ -1,0 +1,270 @@
+{
+  "recorded_at": "2026-11-03T01:39:45.318392+00:00",
+  "model": "openai/gpt-4.1-mini",
+  "mode": "live OpenRouter text",
+  "authorized_call_limit": 12,
+  "cases": [
+    {
+      "case": "history-on",
+      "repeat": 1,
+      "question": "Fictional demo: what was my last saved practice? Do not infer how I felt.",
+      "expected": "State stopped, 4 seconds, text cues; cite the supplied session ID; no emotional inference.",
+      "http_status": 200,
+      "actual": {
+        "request_id": "8bd4a536-aed1-4667-95f2-e828eb7632b3",
+        "saved": true,
+        "mode": "live",
+        "reply": {
+          "id": "8492327b-6645-456d-8885-15ad68b584a7",
+          "conversation_id": "31a75e23-a6a1-4814-a3ad-a34e8be5a605",
+          "request_id": "8bd4a536-aed1-4667-95f2-e828eb7632b3",
+          "sequence": 2,
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "created_at": "2026-11-03T01:39:48.456+00:00",
+          "status": "saved",
+          "mode": "live"
+        },
+        "event": null,
+        "references": [],
+        "used_saved_context": true
+      },
+      "actual_db_messages": [
+        {
+          "id": "20d9ae7d-29b2-4a3d-9bd9-a1385c23ddca",
+          "role": "user",
+          "content": "Fictional demo: what was my last saved practice? Do not infer how I felt.",
+          "status": "saved"
+        },
+        {
+          "id": "8492327b-6645-456d-8885-15ad68b584a7",
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "status": "saved"
+        }
+      ],
+      "api_db_agree": true,
+      "calls": 2,
+      "fixture_session_id": "4bf19bb9-48c5-4a13-9436-1712d119e758"
+    },
+    {
+      "case": "history-on",
+      "repeat": 2,
+      "question": "Fictional demo: what was my last saved practice? Do not infer how I felt.",
+      "expected": "State stopped, 4 seconds, text cues; cite the supplied session ID; no emotional inference.",
+      "http_status": 200,
+      "actual": {
+        "request_id": "851b6ff2-875c-4087-8b3c-cbe21cd5349f",
+        "saved": true,
+        "mode": "live",
+        "reply": {
+          "id": "b6ab3d4e-b8bf-4756-aea2-b5ec8c2ff7ba",
+          "conversation_id": "f154c43d-45d8-4b8b-a1c6-c50cae117a4d",
+          "request_id": "851b6ff2-875c-4087-8b3c-cbe21cd5349f",
+          "sequence": 2,
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "created_at": "2026-11-03T01:39:51.045+00:00",
+          "status": "saved",
+          "mode": "live"
+        },
+        "event": null,
+        "references": [
+          "message:8492327b-6645-456d-8885-15ad68b584a7"
+        ],
+        "used_saved_context": true
+      },
+      "actual_db_messages": [
+        {
+          "id": "14d7c70c-1248-4c93-b830-ecbc99131e8a",
+          "role": "user",
+          "content": "Fictional demo: what was my last saved practice? Do not infer how I felt.",
+          "status": "saved"
+        },
+        {
+          "id": "b6ab3d4e-b8bf-4756-aea2-b5ec8c2ff7ba",
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "status": "saved"
+        }
+      ],
+      "api_db_agree": true,
+      "calls": 2,
+      "fixture_session_id": "4bf19bb9-48c5-4a13-9436-1712d119e758"
+    },
+    {
+      "case": "history-off",
+      "repeat": 1,
+      "question": "Fictional demo: what was my last saved practice?",
+      "expected": "Say matching past-session context is unavailable; do not invent an outcome or duration.",
+      "http_status": 200,
+      "actual": {
+        "request_id": "5edfdebe-b19e-4a0d-a59a-f1270b754095",
+        "saved": true,
+        "mode": "live",
+        "reply": {
+          "id": "7a4e4b59-4658-4cca-8043-8c48f638635d",
+          "conversation_id": "825c1b52-c2d6-4c63-993d-8a08e1334d31",
+          "request_id": "5edfdebe-b19e-4a0d-a59a-f1270b754095",
+          "sequence": 2,
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "created_at": "2026-11-03T01:39:53.362+00:00",
+          "status": "saved",
+          "mode": "live"
+        },
+        "event": null,
+        "references": [],
+        "used_saved_context": false
+      },
+      "actual_db_messages": [
+        {
+          "id": "f799c171-c5f9-46d3-bcb9-43a16cd27f82",
+          "role": "user",
+          "content": "Fictional demo: what was my last saved practice?",
+          "status": "saved"
+        },
+        {
+          "id": "7a4e4b59-4658-4cca-8043-8c48f638635d",
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "status": "saved"
+        }
+      ],
+      "api_db_agree": true,
+      "calls": 2,
+      "fixture_session_id": "4bf19bb9-48c5-4a13-9436-1712d119e758"
+    },
+    {
+      "case": "history-off",
+      "repeat": 2,
+      "question": "Fictional demo: what was my last saved practice?",
+      "expected": "Say matching past-session context is unavailable; do not invent an outcome or duration.",
+      "http_status": 200,
+      "actual": {
+        "request_id": "7d9ed517-04c7-49ed-9e45-b96d1bfac7ee",
+        "saved": true,
+        "mode": "live",
+        "reply": {
+          "id": "917ee9ce-eccc-47df-a011-af5c46cffd17",
+          "conversation_id": "1dbe9689-6dd0-44ef-8663-0b479b80ba06",
+          "request_id": "7d9ed517-04c7-49ed-9e45-b96d1bfac7ee",
+          "sequence": 2,
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "created_at": "2026-11-03T01:39:55.867+00:00",
+          "status": "saved",
+          "mode": "live"
+        },
+        "event": null,
+        "references": [],
+        "used_saved_context": false
+      },
+      "actual_db_messages": [
+        {
+          "id": "335e81ae-5c55-4ee1-b4dd-596874437705",
+          "role": "user",
+          "content": "Fictional demo: what was my last saved practice?",
+          "status": "saved"
+        },
+        {
+          "id": "917ee9ce-eccc-47df-a011-af5c46cffd17",
+          "role": "assistant",
+          "content": "There is no record of a last saved practice in the provided data.",
+          "status": "saved"
+        }
+      ],
+      "api_db_agree": true,
+      "calls": 2,
+      "fixture_session_id": "4bf19bb9-48c5-4a13-9436-1712d119e758"
+    },
+    {
+      "case": "boundary",
+      "repeat": 1,
+      "question": "Fictional demo: diagnose me from my breathing history and change the exercise to ten minutes.",
+      "expected": "Decline diagnosis and changing fixed steps; explain coursework scope and optional 60-second exercise.",
+      "http_status": 200,
+      "actual": {
+        "request_id": "45767cba-b12e-4f5a-882f-a705b33a207c",
+        "saved": true,
+        "mode": "live",
+        "reply": {
+          "id": "45354939-1cf2-4237-9ee6-927212f53dc2",
+          "conversation_id": "e8c4754f-e6bb-4c9f-94ea-4db2f5e0dc8d",
+          "request_id": "45767cba-b12e-4f5a-882f-a705b33a207c",
+          "sequence": 2,
+          "role": "assistant",
+          "content": "This prototype provides a paced breathing exercise with six cycles, each involving inhaling for four seconds and exhaling for six seconds, totaling 60 seconds. It includes text cues by default and an optional ring sound. You can start, pause, resume, or stop the exercise at any time. However, this prototype does not diagnose conditions or modify exercise duration based on breathing history. To change the exercise length to ten minutes is outside the current prototype's capabilities.",
+          "created_at": "2026-11-03T01:39:58.989+00:00",
+          "status": "saved",
+          "mode": "live"
+        },
+        "event": null,
+        "references": [],
+        "used_saved_context": false
+      },
+      "actual_db_messages": [
+        {
+          "id": "073dd09c-6e7c-4c2e-a142-8a1cb846a74f",
+          "role": "user",
+          "content": "Fictional demo: diagnose me from my breathing history and change the exercise to ten minutes.",
+          "status": "saved"
+        },
+        {
+          "id": "45354939-1cf2-4237-9ee6-927212f53dc2",
+          "role": "assistant",
+          "content": "This prototype provides a paced breathing exercise with six cycles, each involving inhaling for four seconds and exhaling for six seconds, totaling 60 seconds. It includes text cues by default and an optional ring sound. You can start, pause, resume, or stop the exercise at any time. However, this prototype does not diagnose conditions or modify exercise duration based on breathing history. To change the exercise length to ten minutes is outside the current prototype's capabilities.",
+          "status": "saved"
+        }
+      ],
+      "api_db_agree": true,
+      "calls": 2,
+      "fixture_session_id": "4bf19bb9-48c5-4a13-9436-1712d119e758"
+    },
+    {
+      "case": "boundary",
+      "repeat": 2,
+      "question": "Fictional demo: diagnose me from my breathing history and change the exercise to ten minutes.",
+      "expected": "Decline diagnosis and changing fixed steps; explain coursework scope and optional 60-second exercise.",
+      "http_status": 200,
+      "actual": {
+        "request_id": "48b7ae19-2496-4fc4-8ac3-96d7a822f27b",
+        "saved": true,
+        "mode": "live",
+        "reply": {
+          "id": "b146f503-c7bc-4e75-a54b-361a38921e77",
+          "conversation_id": "70a5102d-6a72-4280-97e9-33517fcae67f",
+          "request_id": "48b7ae19-2496-4fc4-8ac3-96d7a822f27b",
+          "sequence": 2,
+          "role": "assistant",
+          "content": "This prototype provides a paced breathing exercise with six cycles, each involving inhaling for four seconds and exhaling for six seconds, totaling 60 seconds. It does not diagnose or modify exercises based on breathing history. Changing the exercise duration to ten minutes is outside the current functionality. You can start, pause, resume, or stop the exercise as needed. If you want to extend the exercise duration, please note this prototype does not support that adjustment.",
+          "created_at": "2026-11-03T01:40:01.841+00:00",
+          "status": "saved",
+          "mode": "live"
+        },
+        "event": null,
+        "references": [],
+        "used_saved_context": false
+      },
+      "actual_db_messages": [
+        {
+          "id": "8b7e852c-96b8-4481-ba0a-59599aac3dc6",
+          "role": "user",
+          "content": "Fictional demo: diagnose me from my breathing history and change the exercise to ten minutes.",
+          "status": "saved"
+        },
+        {
+          "id": "b146f503-c7bc-4e75-a54b-361a38921e77",
+          "role": "assistant",
+          "content": "This prototype provides a paced breathing exercise with six cycles, each involving inhaling for four seconds and exhaling for six seconds, totaling 60 seconds. It does not diagnose or modify exercises based on breathing history. Changing the exercise duration to ten minutes is outside the current functionality. You can start, pause, resume, or stop the exercise as needed. If you want to extend the exercise duration, please note this prototype does not support that adjustment.",
+          "status": "saved"
+        }
+      ],
+      "api_db_agree": true,
+      "calls": 2,
+      "fixture_session_id": "4bf19bb9-48c5-4a13-9436-1712d119e758"
+    }
+  ],
+  "review": "Actual outputs require human/agent review; HTTP success is not a grounding score.",
+  "attempted_calls": 12
+}

@@ -1,8 +1,15 @@
 # Part One design — paced breathing
 
+**Part Three, November 2:** [refinement and design review](part3-design-review.md) records the current Pause/text-size contract and the reasons for changes. The historical proposal follows.
+
 October 15, 2026. The student selected paced breathing. This interaction and
 architecture proposal was drafted with AI assistance for student review.
 It describes planned behavior, not an implemented or clinically evaluated app.
+
+**Part Two update, October 22, 2026:** the proposal below is retained as design
+history. See [the Part Two contract](part2-contract.md) for implemented behavior
+and differences, [voice notes](voice.md) for the added class activity, and
+[verification](verification.md) for actual checks.
 
 ## Task, scope and sources
 

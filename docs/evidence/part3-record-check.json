@@ -1,0 +1,93 @@
+{
+  "sessions": [
+    {
+      "id": "ce084aae-6b43-4f9a-8f3e-d2abcd90d16c",
+      "user_id": "fictional-local-user",
+      "revision": 17,
+      "skill": "paced-breathing",
+      "skill_version": "1",
+      "cue_mode": "ring",
+      "started_at": "2026-11-03T01:18:46.791000Z",
+      "ended_at": "2026-11-03T01:19:57.037000Z",
+      "outcome": "stopped",
+      "wall_ms": 70246,
+      "excluded_ms": 69355,
+      "active_ms": 891,
+      "setup_ms": 5640
+    },
+    {
+      "id": "378787a5-0ae7-4ada-8b23-b394e9e3ba95",
+      "user_id": "fictional-local-user",
+      "revision": 12,
+      "skill": "paced-breathing",
+      "skill_version": "1",
+      "cue_mode": "ring",
+      "started_at": "2026-11-03T01:24:30.426000Z",
+      "ended_at": "2026-11-03T01:25:30.439000Z",
+      "outcome": "completed",
+      "wall_ms": 60013,
+      "excluded_ms": 0,
+      "active_ms": 60013,
+      "setup_ms": 1015
+    }
+  ],
+  "conversation_id": "21ede5d9-4af0-4cd2-a021-cec4d8a1c5bc",
+  "db_messages": [
+    {
+      "id": "de8adaa3-ba08-400b-b5fb-4e57344cc7da",
+      "conversation_id": "21ede5d9-4af0-4cd2-a021-cec4d8a1c5bc",
+      "request_id": "df5e173e-8fcc-4783-9172-a03826c7a4b3",
+      "sequence": 1,
+      "role": "user",
+      "content": "[demo:fail]",
+      "created_at": "2026-11-03T01:24:16.887+00:00",
+      "status": "failed",
+      "mode": "demo"
+    }
+  ],
+  "api_history": {
+    "messages": [
+      {
+        "id": "de8adaa3-ba08-400b-b5fb-4e57344cc7da",
+        "conversation_id": "21ede5d9-4af0-4cd2-a021-cec4d8a1c5bc",
+        "request_id": "df5e173e-8fcc-4783-9172-a03826c7a4b3",
+        "sequence": 1,
+        "role": "user",
+        "content": "[demo:fail]",
+        "created_at": "2026-11-03T01:24:16.887+00:00",
+        "status": "failed",
+        "mode": "demo"
+      }
+    ],
+    "requests": [
+      {
+        "id": "df5e173e-8fcc-4783-9172-a03826c7a4b3",
+        "status": "failed",
+        "error_code": "provider_failed",
+        "references": []
+      }
+    ],
+    "events": []
+  },
+  "message_objects_match": true,
+  "preferences": {
+    "user_id": "fictional-local-user",
+    "cue_mode": "ring",
+    "use_saved_context": 0,
+    "updated_at": "2026-11-03T01:18:40.971+00:00",
+    "text_size": "large"
+  },
+  "foreign_key_violations": [],
+  "schema_version": 2,
+  "process_restart_check": {
+    "history_same_after_process_restart": true,
+    "all_part3_session_ids_retained": true,
+    "large_text_retained": true,
+    "health": {
+      "mode": "demo",
+      "configured": true,
+      "live_calls": 0,
+      "live_call_limit": 12
+    }
+  }
+}

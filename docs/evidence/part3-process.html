@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Part 3 · Process evidence</title><style>body{max-width:1050px;margin:40px auto;padding:0 30px;background:#f4f5ef;color:#273e35;font:20px/1.55 Segoe UI,sans-serif}h1,h2{font-family:Georgia;font-weight:normal}h1{font-size:42px}h2{margin-top:50px}pre{background:#fffefa;padding:24px;border:1px solid #cdd5c7;border-radius:12px;white-space:pre-wrap;font:17px/1.5 Consolas,monospace}p{max-width:900px}.tag{font-size:16px;color:#536259}section{margin-bottom:60px}a{color:#214f42}</style>
+<p class="tag">PART THREE · PROCESS SCREENCAST · FICTIONAL SOFTWARE TESTS</p>
+<h1>A failed request must stay visibly failed.</h1>
+<section><h2>1. Failure shown in the running app</h2><p>The input <code>[demo:fail]</code> deliberately simulates a provider failure. It is a mock, not a live-model observation. The question is saved with failed status. Retrying uses the same request ID, so it does not duplicate the question or invent an answer.</p><p>Decision: keep the failed message visible, explain that no answer was generated, and leave Crisis support usable. The S02 and S10 scenario assertions verify failures and invalid references. Browser and SQLite inspection check the actual saved record.</p></section>
+<section><h2>2. A surprising timer failure found during development</h2><p>On October 24, separately rounding wall and excluded time made active time move backwards by 1 millisecond while paused. SQLite rejected that save as a backwards checkpoint. The earlier unfinished record was preserved as evidence, not rewritten as successful.</p><pre>Old calculation (historical reconstruction):
+active = round(wall) - round(excluded)
+
+900.4 ms of actual practice:
+round(5000.6) - round(4100.2) = 901
+round(5001.0) - round(4100.6) = 900
+
+Observed consequence: a later checkpoint can be smaller.</pre><p>Decision: round active time itself, then derive excluded time. A regression test samples fractional pause times and requires all checkpoints to remain at 900 ms. This page explains the recorded failure; it does not claim the old bug is still in the current app.</p></section>
+<section><h2>3. Explain the generated code</h2><pre>  snapshot(now) {
+    const end = this.ended ?? now
+    const wall = Math.max(0, Math.round(end - this.started))
+    // Round active time itself so fractional pause samples cannot make a saved
+    // active duration move backwards by 1 ms when wall/excluded round separately.
+    const active = Math.min(wall, Math.max(0, Math.round((this.pauseAt ?? end) - this.started - this.excluded)))
+    const excluded = wall - active
+</pre><p><code>end</code> freezes once the exercise ends. While paused, <code>pauseAt</code> freezes active time. Completed pauses are accumulated in <code>excluded</code>. Deriving excluded time from wall minus active preserves the accounting identity. The model never controls this timer, Stop, or support.</p><p>The intended sequence remains six 4-second inhales and 6-second exhales. User pauses are reported separately. A hidden tab or long scheduling gap is interrupted, never rushed to completion.</p></section>
+<section><h2>4. What the evidence establishes</h2><p>Eighteen deterministic fictional scenarios and three cross-case checks passed on November 2, 2026. All 40 unit/integration checks and the production build passed. Mocks establish application behavior; they do not establish clinical benefit or live-model quality.</p><p>Twelve live text calls were later reviewed: three cases passed, two failed and one partially passed. The two history-on answers missed a saved practice; one boundary answer invented a ring sound. Prompt wording was clarified, but the user kept the twelve-call limit, so the revision remains unverified live. Student review of this explanation remains separate. Optional live voice has not been tested with a real microphone or paid session.</p></section></html>

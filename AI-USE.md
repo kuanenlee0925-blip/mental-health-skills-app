@@ -1,3 +1,80 @@
+# AI-use disclosure — Part Three update
+
+November 2, 2026. Codex (GPT-6 family; exact model identifier not available in
+the tool environment) generated the Pause/larger-text changes, migration check,
+scenario/live-evaluation runners, draft report and supporting documentation.
+PowerShell, existing Python/Node dependencies, Git, and cua_repl browser tools
+were used to verify the source and running app. The Computer Use skill informed
+UI verification. No subagents or new dependencies were used in this increment.
+
+Mock evaluation: 18 fictional cases, three cross-case checks; all 40 automated
+tests and the Vite build passed. Browser/API/read-only SQLite evidence is
+separate from simulated-clock tests. A source-only copy reused the installed
+dependencies; no independent peer test is claimed. Native recording failed to
+target Chrome reliably; a script and HTML evidence page were prepared instead.
+No finished video or student narration is claimed.
+
+Live OpenRouter text: all twelve authorized calls ran using openai/gpt-4.1-mini
+at temperature zero, six fictional questions in a temporary database. API/DB
+persistence matched, while agent content review found three pass, two fail and
+one partial result. Missed session retrieval and an invented ring sound prompted
+clarifications. The student declined four additional calls, so those revisions
+remain unverified live. Original evidence is preserved. See
+[the live review](docs/part3-live-evaluation.md). Official OpenRouter setup/model
+pages were checked to help locate the key and public model ID. Credentials were
+never printed or included in evidence. No further calls are authorized.
+
+Selected changes/failures/decisions: [Part Three curated log](prompts/03-part3-refinement.md).
+The student must review and understand the generated explanation. An AI draft
+is not evidence that the student ran a test, watched a video or understood code.
+
+---
+
+# AI-use disclosure — Part Two update
+
+Updated October 25, 2026. The October 15 disclosure below is retained as history.
+
+Presentation preparation: the student supplied the Canvas rubric and asked to
+prepare for it. Codex drafted docs/presentation-guide.md, mapped existing behavior
+to four criteria, added a small optional saved-profile/latest-practice UI, and
+verified preference refresh/reuse plus history-off/on fixture replies in Chrome
+and read-only SQLite. Selected opening frames of the instructor's direct video
+were reviewed; a full viewing is not claimed. No slide deck, student rehearsal,
+live model call or presentation submission was performed.
+
+| Tool/model | Available identifier | Actual role in Part Two |
+| --- | --- | --- |
+| Codex coding assistant | GPT-6 family; exact selected model/version not exposed | Generated Vue/FastAPI/SQLite implementation, deterministic fixtures, tests, documentation and draft report; reviewed/fixed timer and voice lifecycle failures |
+| Shell, file and Git tools | PowerShell, Python 3.14.7, Node.js 24.20.0, npm 11.19.0 | Project-local authorized installs, source edits, test/build runs, read-only SQLite/API comparison, branch/diff inspection |
+| Browser control | Chrome via cua_repl extension | Read complete live-audio activity; operated actual local app; verified timing, Stop/support, failures/retry, refresh/restart, narrow iframe and record IDs; captured screenshots |
+| OpenAI documentation and web tools | Official Live, delegation, prompting, models and sideband references | Checked provider contract before implementing server-owned two-model voice flow; OpenRouter and framework references informed adapters/setup |
+| Helpline lookup connector | Service version not exposed | Verified U.S. support resource destinations before bundling them; no crisis service was contacted |
+| Sites / local preview skill | Skill package 1.1.2 at final review | Guided local project preview; no Sites cloud publication or public support deployment |
+| Computer-use / OpenAI-docs skills | Installed local skills | Browser workflow and official API reference lookup |
+| Application text adapter | OpenRouter model configurable; none selected or called live | Implemented two-call SQL planning/answer API path; all demonstrated replies are clearly labeled deterministic fixtures |
+| Application voice adapter | gpt-live-1 and delegated gpt-6-luna in server configuration | Implemented according to official docs; mock tests only, no paid/live conversation |
+
+The student requested Part Two and the live-audio activity, approved dependency
+installs and asked the agent to continue. The agent implemented the previously
+selected paced-breathing proposal, drafted explanations and ran fictional tests.
+The student still needs to review the generated code/report and perform the
+credentialed demonstrations; no review or understanding is assumed.
+
+Curated prompts and failed/revised approaches are in
+[prompts/02-part2-and-live-audio.md](prompts/02-part2-and-live-audio.md).
+The pause-rounding regression, sticky support header and late voice cancellation
+are documented in [verification](docs/verification.md). Screenshots and database
+metadata contain fictional tests. No keys, real therapy conversations, travel
+records or research-participant data were copied into this project.
+
+Part Two remains local and uncommitted. Actual live-model contribution, real audio,
+publication and Canvas submission are not claimed. Figma was used for the earlier
+flow diagram only; no running-interface capture or design implementation occurred.
+
+## Historical Part One disclosure
+
+The statements below describe the earlier design checkpoint, before implementation.
+
 # AI-use disclosure
 
 Updated October 15, 2026. This disclosure covers the work actually performed for

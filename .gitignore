@@ -24,3 +24,9 @@ dist/
 .pytest_cache/
 .DS_Store
 Thumbs.db
+
+# Local Part 3 evaluation working copies and persistent paid-call counter
+/data/part3-clean-*/
+/data/part3-clean-location.txt
+/data/part3-live-budget.json
+/data/part3-live-budget.tmp
