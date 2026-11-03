@@ -1,3 +1,14 @@
+## GitHub publication — November 2, 2026
+
+User requested publication. Rechecked 22 backend and 18 frontend tests and Vite
+build: all passed; no live calls. Reviewed 74 changed files and checked the Git
+index excludes backend/.env and runtime data. Configured-secret scan found no
+matches in 81 candidate files. Implementation/evidence commit
+[`41bab285ad9b3a085ccc8b8e357ac78e96e11d82`](https://github.com/kuanenlee0925-blip/mental-health-skills-app/commit/41bab285ad9b3a085ccc8b8e357ac78e96e11d82) was pushed to
+`codex/part3-refinement`. The report's follow-up documentation commit adds immutable GitHub
+links. Main remains Part One. Recordings and independent checkout verification
+remain pending.
+
 # Part Three verification — November 2, 2026
 
 Current branch: `codex/part3-refinement`. All checks below were actually run

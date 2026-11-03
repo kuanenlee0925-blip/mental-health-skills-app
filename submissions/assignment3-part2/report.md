@@ -1,3 +1,7 @@
+**Publication note — November 2, 2026:** This historical Part Two draft is retained.
+The complete implementation is now published in the [Part Three checkpoint](https://github.com/kuanenlee0925-blip/mental-health-skills-app/commit/41bab285ad9b3a085ccc8b8e357ac78e96e11d82).
+See the [current Part Three report](../assignment3-part3/report.md) for later live findings and remaining deliverables.
+
 # Assignment 3.2 — Part Two implementation report (draft)
 
 Updated October 25, 2026. Coursework prototype; fictional testing only.

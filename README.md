@@ -17,8 +17,9 @@ passed. See the [Part Three report draft](submissions/assignment3-part3/report.m
 [design review](docs/part3-design-review.md), [recording guide](docs/part3-recording-guide.md)
 and [clean-checkout checklist](docs/part3-clean-checkout.md).
 
-[Live text variation](docs/part3-live-evaluation.md) used all 12 authorized calls: three cases passed, two failed and one partially passed. Prompt revisions are not live-verified. Finished recordings, publication and an independent fresh-checkout test remain pending. Public main still contains
-Part One, so a clone does not yet reproduce this local implementation.
+[Live text variation](docs/part3-live-evaluation.md) used all 12 authorized calls: three cases passed, two failed and one partially passed. Prompt revisions are not live-verified. Finished recordings and an independent fresh-checkout test remain pending.
+The implementation is published on [codex/part3-refinement](https://github.com/kuanenlee0925-blip/mental-health-skills-app/tree/codex/part3-refinement);
+main preserves Part One. Use the branch or checkpoint below for this version.
 
 ## Existing implementation
 
@@ -34,12 +35,24 @@ Part One, so a clone does not yet reproduce this local implementation.
   unverified until configured and explicitly tested by the student.
 - The original [Part One report](report.md) is preserved. See the separate
   [Part Two report draft](submissions/assignment3-part2/report.md). Part Two is
-  local and uncommitted; live model evidence and publication still need finishing.
+  a historical milestone draft. The published Part Three checkpoint includes the
+  implementation plus the later live-model findings.
 
 ## Run locally on Windows
 
 Verified tools: Python 3.14.7, Node.js 24.20.0, npm 11.19.0. From the project
-root, install the project-local dependencies if needed:
+root, install the project-local dependencies if needed. For a new copy, first run:
+
+```powershell
+git clone --branch codex/part3-refinement https://github.com/kuanenlee0925-blip/mental-health-skills-app.git
+cd mental-health-skills-app
+git checkout 41bab285ad9b3a085ccc8b8e357ac78e96e11d82
+```
+
+This pins the tested implementation/evidence checkpoint. The branch also has
+later documentation updates with the final report links.
+
+Then install dependencies:
 
 ```powershell
 python -m venv backend/.venv

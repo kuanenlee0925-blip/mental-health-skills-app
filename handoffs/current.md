@@ -6,8 +6,8 @@ Updated November 2, 2026. Active task: complete Assignment 3 Part Three.
 
 Project: C:/Users/kuane/OneDrive/Documents/ChatGPT/Mental Health Application
 Branch: `codex/part3-refinement`; base `20ad2fad3c3eece7678db12fcd9ce8e3418c3626`.
-All Part Two/Three source is local, uncommitted and unpushed. Public main is
-Part One. Root report.md and AGENTS.md are preserved. Part Three draft:
+Part Two/Three source and evidence are committed and published on this branch.
+Implementation checkpoint: `41bab285ad9b3a085ccc8b8e357ac78e96e11d82`. Main preserves Part One. Root report.md and AGENTS.md are preserved. Part Three draft:
 submissions/assignment3-part3/report.md. Do not claim it is ready to submit.
 
 ## Completed in Part Three
@@ -66,10 +66,10 @@ app remains demo; voice disabled. No paid follow-up option was retained.
    explanation or resolve capture access; no fake screencast/slideshow claim.
 3. Fresh checkout/dependency setup and independent peer verification after
    publication. Checklist in docs/part3-clean-checkout.md. No peer result invented.
-4. Review the concrete source/evidence diff, request any needed final publication
-   approval, commit/push intended files, replace pending exact commit and video
-   links in Part Three report with accessible pinned links. Do not publish keys,
-   local DB, runtime copies or budget ledger. No Canvas submission performed.
+4. GitHub publication is complete: user explicitly requested it, source checkpoint
+   pushed, and report updated with pinned evidence links in a follow-up docs commit.
+   Add actual video links once recorded. Keys, local DB, working copies and the
+   budget ledger stay ignored. No Canvas submission performed.
 5. Student reviews generated code/report and explains it; understanding not assumed.
 
 ## Running services and evidence
@@ -88,10 +88,13 @@ Failed mock conversation: 21ede5d9-4af0-4cd2-a021-cec4d8a1c5bc.
 Earlier October 24 rounding failure record is preserved. Do not erase it.
 
 No new dependencies or subagents used. Existing authorized dependencies only.
-No Figma capture, deployment, merge, push, paid voice, or student recording claimed.
+No Figma capture, app deployment, main-branch merge, paid voice, or student recording claimed.
 
 Final UI restored to original ring cues, standard text and history sharing off.
 The larger-text evidence was captured before restoring the preference.
 
-Final UI restored to original ring cues, standard text and history sharing off.
-The larger-text evidence was captured before restoring the preference.
+
+GitHub publication check: all 22 backend/18 frontend checks and build passed again
+using mocks only. Candidate-file scan found no configured credential values;
+.env and runtime data were not staged. Review diff: 74 files, including the
+previously uncommitted Part Two implementation. No extra paid calls were made.

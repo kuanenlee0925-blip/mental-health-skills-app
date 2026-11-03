@@ -2,16 +2,18 @@
 
 A Little Space · Paced breathing · November 2, 2026
 
-**Status: local draft; not yet ready for submission.** The implementation and
+**Status: published implementation and report draft; recordings and independent checkout verification still pending.** The implementation and
 mock/browser evaluation below are complete. The live selection is complete and exposed two quality problems; the prompt
-revisions remain unverified live. Finished recordings, a published submission
-commit, and the independent clean-checkout check still need completion. No missing evidence is presented as passed.
+revisions remain unverified live. Finished recordings and the independent clean-checkout check still need completion. No missing evidence is presented as passed.
 
 Repository: https://github.com/kuanenlee0925-blip/mental-health-skills-app
 
-Submitted commit: **pending**. Work is on local `codex/part3-refinement`, based on
-`20ad2fad3c3eece7678db12fcd9ce8e3418c3626`. That base commit does not contain the
-Part Two/Three implementation. Do not submit it as the implemented version.
+Submitted implementation/evidence commit: [41bab285ad9b3a085ccc8b8e357ac78e96e11d82](https://github.com/kuanenlee0925-blip/mental-health-skills-app/commit/41bab285ad9b3a085ccc8b8e357ac78e96e11d82).
+
+Published branch: [codex/part3-refinement](https://github.com/kuanenlee0925-blip/mental-health-skills-app/tree/codex/part3-refinement). This checkpoint contains
+the complete application and evaluation evidence. This report was then updated
+in a documentation-only commit to reference that immutable checkpoint. Main
+still preserves Part One; use the linked branch or checkpoint for this version.
 
 ## What is implemented
 
@@ -44,11 +46,11 @@ a direct Pause action adds a small amount of UI while improving control (R3/R4).
 Larger text is inside optional saved choices, balancing reading access with
 configuration effort (D5/D6). Adaptation uses explicit choices and navigation,
 not inferred distress. One skill limits variety but avoids a demanding library
-(D2/D3). Full decisions and tradeoffs: [design review](../../docs/part3-design-review.md).
+(D2/D3). Full decisions and tradeoffs: [design review](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/part3-design-review.md).
 
 ## Evaluation and observed evidence
 
-- [18 fictional scenarios](../../docs/part3-evaluation.md), including ordinary
+- [18 fictional scenarios](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/part3-evaluation.md), including ordinary
   conversation, consent changes, pause/stop, interruptions, retry, missing
   configuration, rejected SQL and storage/provider failures. Every row has an
   expected result and an observed assertion outcome. All 18 passed using mocks
@@ -65,16 +67,16 @@ not inferred distress. One skill limits variety but avoids a demanding library
   support remained reachable at 390 × 640. A failed demo request and retry left
   one failed user message, and support still opened. Read-only SQLite agreed
   with the API by record IDs; schema version 2 had no foreign-key violations.
-- [Clean source reproduction](../../docs/part3-clean-checkout.md) passed tests,
+- [Clean source reproduction](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/part3-clean-checkout.md) passed tests,
   build and fresh empty-database startup while reusing installed dependencies.
   This is not a claim of a fresh dependency install or independent peer testing.
 
-[Verification notes](../../docs/verification.md),
-[machine-readable scenarios](../../docs/evidence/part3-scenarios.json),
-[database/API evidence](../../docs/evidence/part3-record-check.json),
-[completed exercise screenshot](../../docs/evidence/part3-completed.png),
-[paused mobile screenshot](../../docs/evidence/part3-narrow-paused.png),
-[failure screenshot](../../docs/evidence/part3-chat-failure.png).
+[Verification notes](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/verification.md),
+[machine-readable scenarios](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-scenarios.json),
+[database/API evidence](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-record-check.json),
+[completed exercise screenshot](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-completed.png),
+[paused mobile screenshot](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-narrow-paused.png),
+[failure screenshot](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-chat-failure.png).
 
 ### Live-model variation — completed with failures
 
@@ -85,8 +87,8 @@ history-on replies missed the available saved practice. History-off replies
 correctly admitted missing context. Both boundary replies declined diagnosis
 and duration changes, but one invented a ring sound; the ring is visual.
 
-[Full expected/observed review and variation](../../docs/part3-live-evaluation.md)
-and [actual outputs/records](../../docs/evidence/part3-live.json) preserve these
+[Full expected/observed review and variation](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/part3-live-evaluation.md)
+and [actual outputs/records](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-live.json) preserve these
 results. The history-on wording was identical but references differed; boundary
 wording differed, including the unsupported sound claim. Fresh conversations
 shared the same temporary fixture database, so this was repeated app behavior,
@@ -117,22 +119,20 @@ Finished application recording: **pending — insert an accessible video link**.
 
 Process recording: **pending — insert an accessible video link**.
 
-[Recording script](../../docs/part3-recording-guide.md) and
-[process evidence page with code explanation](../../docs/evidence/part3-process.html)
+[Recording script](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/part3-recording-guide.md) and
+[process evidence page with code explanation](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/docs/evidence/part3-process.html)
 are prepared. They are not recordings. The process demonstration should show
 `[demo:fail]`, the preserved failed message/no duplicate retry, independent
 support, the rounding evidence, and an explanation of `Pacer.snapshot`.
 
 ## Reproduction and AI disclosure
 
-Follow [README](../../README.md). Peers should use demo mode with fictional
-inputs and no provider key. [AI-USE.md](../../AI-USE.md) and the
-[curated Part Three prompt/change log](../../prompts/03-part3-refinement.md)
+Follow [README](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/README.md). Peers should use demo mode with fictional
+inputs and no provider key. [AI-USE.md](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/AI-USE.md) and the
+[curated Part Three prompt/change log](https://github.com/kuanenlee0925-blip/mental-health-skills-app/blob/41bab285ad9b3a085ccc8b8e357ac78e96e11d82/prompts/03-part3-refinement.md)
 disclose generated code, evaluation, documentation and revised approaches.
 Student understanding and review have not been assumed.
 
-Before uploading this report: review the live findings and finish the recordings,
-verify the clean checkout, commit/publish the reviewed source and evidence,
-replace the pending commit and video links, and convert relative evidence links
-to accessible GitHub links pinned to that actual commit. No Canvas submission
+Before uploading this report: review the live findings, finish and link the recordings, and verify the clean
+checkout. The implementation commit and evidence links are already published. No Canvas submission
 has been made.

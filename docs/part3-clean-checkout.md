@@ -16,7 +16,8 @@ accidentally depend on the original runtime records or working directory.
 **Limit:** the Python environment and frontend dependency directory were reused
 from the authorized local installation. This was not a fresh dependency install,
 a Git checkout of a published Part Three commit, or an independent peer test.
-The current source is still uncommitted; cloning public main will get Part One.
+The source is now published at `41bab285ad9b3a085ccc8b8e357ac78e96e11d82` on `codex/part3-refinement`.
+Main still contains Part One. Use the branch/checkpoint instructions in the latest README.
 
 ## Peer check to complete after publication
 

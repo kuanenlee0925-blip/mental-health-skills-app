@@ -118,3 +118,10 @@ submission is claimed.
 Evidence excludes credentials, local environment-file contents, account email,
 internal account identifiers, real personal conversations, and research
 participant data. Testing and demonstrations must use fictional scenarios only.
+
+
+November 2 publication update: at the student's explicit request, Codex reviewed
+and committed the implementation/evidence, pushed codex/part3-refinement, and
+updated the report with immutable GitHub links. Re-ran 40 mock checks and the
+production build; no additional paid model calls. Credentials and runtime data
+were excluded. Publication does not imply a main merge or completed recordings.
